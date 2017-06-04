@@ -1,0 +1,53 @@
+{
+  "data":[
+    {
+      "title": "Height",
+      "subtitle": "Lorem Ipsum is simply dummy text of the printing industry.",
+      "image":"./images/height.png",
+      "details":[]
+    },
+
+    {
+      "title": "Weight",
+      "subtitle": "Lorem Ipsum is simply dummy text of the printing industry.",
+      "image":"./images/weight.png",
+      "details":["250 lb linebacker that runs 4.8 40 yd dash","250 lb linebacker that runs 4.8 40 yd dash","250 lb linebacker that runs 4.8 40 yd dash"]
+    },
+
+    {
+      "title": "Position",
+      "subtitle": "Lorem Ipsum is simply dummy text of the printing industry.",
+      "image":"./images/position.png",
+      "details":["Text detail","Text detail"]
+    },
+
+    {
+      "title": "Class",
+      "subtitle": "Lorem Ipsum is simply dummy text of the printing industry.",
+      "image":"./images/class.png",
+      "details":["Text detail","Text detail"]
+    },
+
+    {
+      "title": "State",
+      "subtitle": "Lorem Ipsum is simply dummy text of the printing industry.",
+      "image":"./images/map.png",
+      "details":["Text detail","Text detail"]
+    },
+
+    {
+      "title": "High School",
+      "subtitle": "Lorem Ipsum is simply dummy text of the printing industry.",
+      "image":"./images/highschool.png",
+      "details":["Text detail","Text detail"]
+    },
+
+    {
+      "title": "Combine results",
+      "subtitle": "Lorem Ipsum is simply dummy text of the printing industry.",
+      "image":"./images/result.png",
+      "details":["Text detail","Text detail"]
+    }
+  ]
+
+}
