@@ -1,3 +1,3 @@
 dependencies: \
-  /Users/sonal/Desktop/demoApp/node_modules/react-native-video/ios/UIView+FindUIViewController.m \
-  /Users/sonal/Desktop/demoApp/node_modules/react-native-video/ios/UIView+FindUIViewController.h
+  /Users/dev/Desktop/ReactNativeApp/dempApp/node_modules/react-native-video/ios/UIView+FindUIViewController.m \
+  /Users/dev/Desktop/ReactNativeApp/dempApp/node_modules/react-native-video/ios/UIView+FindUIViewController.h

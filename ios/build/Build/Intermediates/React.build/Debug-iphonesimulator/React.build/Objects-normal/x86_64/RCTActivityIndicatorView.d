@@ -1,3 +1,3 @@
 dependencies: \
-  /Users/sonal/Desktop/demoApp/node_modules/react-native/React/Views/RCTActivityIndicatorView.m \
-  /Users/sonal/Desktop/demoApp/node_modules/react-native/React/Views/RCTActivityIndicatorView.h
+  /Users/dev/Desktop/ReactNativeApp/dempApp/node_modules/react-native/React/Views/RCTActivityIndicatorView.m \
+  /Users/dev/Desktop/ReactNativeApp/dempApp/node_modules/react-native/React/Views/RCTActivityIndicatorView.h

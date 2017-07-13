@@ -19,6 +19,8 @@ import Constant from '../helper/constant';
 import RowComponent from './userListRow';
 import StatusBar from '../statusBar';
 import { NavigationActions } from 'react-navigation';
+import { authAPICall } from '../helper/apiHelper/commonAPICall';
+import ApConstant from '../helper/apiHelper/apiConstant';
 
 export default class Search extends Component {
 
@@ -26,30 +28,53 @@ export default class Search extends Component {
         super(props);
         this.state={
             dataSource: new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2}),
-            arrList: []
+            arrList: [],
+            meta: {}
         }
     }
 
     componentWillMount(){
+        this.getAthleteDetails();
     }
 
     componentDidMount(){
-        this.setState({
-            dataSource:this.state.dataSource.cloneWithRows(this.getData()),
-            arrList: this.getData(),
+    }
+
+    //API call
+    getAthleteDetails() {
+
+        var url = ApConstant.athlete;
+        if(this.state.meta.next != null){
+            url = this.state.meta.next;
+        }
+
+        authAPICall({url: url}).then(res => {
+            let athletes = this.state.arrList;
+            athletes.push.apply(athletes, res.objects);
+
+            this.setState({
+                dataSource:this.state.dataSource.cloneWithRows(athletes),
+                arrList: athletes,
+                meta: res.meta,
+            });
+
+        }).catch(err => {
+            debugger;
         });
     }
 
-    getData(){
-        let searchData = require('./userlist.json');
-        let json = JSON.stringify(searchData);
-        let obj = JSON.parse(json);
-        return obj.SearchData;
-    }
+    onViewProfile = (id) => {
+        // const { navigate } = this.props.navigation;
+        // navigate('UserDetail');
 
-    onViewProfile = () => {
-        const { navigate } = this.props.navigation;
-        navigate('UserDetail');
+        const goToProfile = NavigationActions.navigate({
+            routeName: 'UserDetail',
+            params: {
+                athleteId: id
+            }
+        });
+        this.props.navigation.dispatch(goToProfile);
+
     };
 
     renderRow = (rowData, sectionId, rowId) => {
@@ -58,7 +83,6 @@ export default class Search extends Component {
                           rowData={rowData}
                           onViewProfile={this.onViewProfile}
             />
-
         )
     };
 
@@ -78,6 +102,11 @@ export default class Search extends Component {
         this.props.navigation.dispatch(backAction)
     };
 
+    //onLast cell
+    onLastRow = () => {
+        this.getAthleteDetails();
+    };
+
     render() {
         return (
             <View style={styles.container}>
@@ -89,11 +118,11 @@ export default class Search extends Component {
                 />
 
                 <View style={{backgroundColor: "#FFF", height: 60, flexDirection:'row', padding:10,
-                alignItem:'center', justifyContent:'center', alignContent: 'center'}}>
+                    alignItem:'center', justifyContent:'center', alignContent: 'center'}}>
 
                     <TextInput
                         style={{ paddingLeft: 10,fontSize:15, color: Constant.COLOR.appColor,
-                         placeholderTextColor: Constant.COLOR.grayFont, flex:0.9}}
+                            placeholderTextColor: Constant.COLOR.grayFont, flex:0.9}}
                         onChangeText={(text) => this.setState({text})}
                         value={this.state.text}
                         placeholder={"Search here"}
@@ -105,19 +134,28 @@ export default class Search extends Component {
                 </View>
 
                 <View style={{backgroundColor: "#FFF", height: 60, margin:10,marginBottom:0, borderRadius: 3,
-                flexDirection:'row', flexWrap:'wrap', alignItem:'flex-start', justifyContent:'center', paddingLeft:10, paddingRight:10,
+                    flexDirection:'row', flexWrap:'wrap', alignItem:'flex-start', justifyContent:'center', paddingLeft:10, paddingRight:10,
                     borderWidth:1.5, borderColor: Constant.COLOR.boxBorder}} >
                     <Text style={{fontSize: 15, color: Constant.COLOR.titleFont, alignSelf: 'center' }}>Showing search result for
                         {" \"High school football players in georgia\""}</Text>
                 </View>
 
                 <View style={{ flexDirection: 'column', flex:1, padding: 10 }}>
-                    <ListView dataSource={this.state.dataSource} ref="listView"
+
+                    <ListView dataSource={this.state.dataSource}
+                              onEndReachedThreshold={100}
+                              ref="listView"
                               renderRow={this.renderRow}
                               renderSeparator={this.renderSeparator}
                               removeClippedSubviews={false}
                               showsVerticalScrollIndicator={false}
+                              onEndReached={() =>  this.onLastRow() }
+                              enableEmptySections={ true }
                     />
+
+                    <View style={{backgroundColor: 'red'}}>
+                        <Text>Loading....</Text>
+                    </View>
                 </View>
             </View>
         );

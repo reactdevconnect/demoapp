@@ -22,30 +22,42 @@ import Constant from '../helper/constant';
 import  Rating from '../userdetail/ratingComponet'
 import { NavigationActions } from 'react-navigation';
 // import VideoPlayer from 'react-native-video-player';
+import { authAPICall } from '../helper/apiHelper/commonAPICall';
+import ApConstant from '../helper/apiHelper/apiConstant';
 
 export default class Search extends Component {
 
     constructor(props){
         super(props);
         this.state={
+            athleteId: props.navigation.state.params.athleteId || 0,
             dataSource: new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2}),
-            arrList: []
+            arrList: [],
+            userDetail: {},
         }
     }
 
     componentWillMount(){
-        this.setState({
-            // dataSource:this.state.dataSource.cloneWithRows(this.getData()),
-
-        })
+        if(this.state.athleteId != 0){
+            this.getAthleteById();
+        }
     }
 
     componentDidMount(){
 
     }
 
-    getData(){
 
+    //API call
+    getAthleteById() {
+        var url = ApConstant.athlete + this.state.athleteId;
+        authAPICall({url: url}).then(res => {
+            this.setState({
+                userDetail: res
+            });
+        }).catch(err => {
+            debugger;
+        });
     }
 
     //Navigation bar
@@ -64,7 +76,7 @@ export default class Search extends Component {
             <View style={{ flex:1,width:Constant.SCREEN.width/2, backgroundColor:'#FFF', marginRight:10,
             padding:5, borderWidth:2, borderRadius:3, borderColor:Constant.COLOR.boxBorder}}>
 
-                <Image source={require('../images/tmpuser.jpeg')} style={{height: Constant.SCREEN.width/3.5,
+                <Image source={require('../images/videoPlaceholder.jpg')} style={{height: Constant.SCREEN.width/3.5,
                     width:Constant.SCREEN.width/2-14,
                     resizeMode:'cover'}}/>
                 <Text style={{color: 'rgb(163,172,183)',
@@ -81,7 +93,8 @@ export default class Search extends Component {
                     padding:2,
                     marginTop:Constant.SCREEN.width/3.5-25,
                     marginLeft: Constant.SCREEN.width/2-60,
-                }}>02:30</Text>
+                    numberOfLines: 1
+                }} >02:30</Text>
             </View>
         );
     };
@@ -107,7 +120,7 @@ export default class Search extends Component {
                         alignItem: 'center',
                         justifyContent: 'center'
                     }}>
-                        <Image source={require('../images/tmpuser.jpeg')}
+                        <Image source={require('../images/userprofile.png')}
                                style={{ alignSelf: 'center',
                                    height:Constant.SCREEN.width/3,
                                    width: Constant.SCREEN.width/3,
@@ -116,7 +129,8 @@ export default class Search extends Component {
                                    marginBottom:10,
                                }}/>
                         <Text style={{marginBottom:10, alignSelf: 'center', fontSize:15, fontWeight: 'bold', color: Constant.COLOR.appBlack }}>
-                            TOM BRADY</Text>
+                            { (this.state.userDetail.full_name) ? this.state.userDetail.full_name.toString().toUpperCase() : ''
+                                }</Text>
                         <View style={{marginBottom:10, alignSelf: 'center', backgroundColor: 'rgb(157,167,179)', borderRadius: 3,
                             justifyContent:'center', width: 105}}>
                             <Text style={{color: '#FFF', fontSize:15, alignSelf:'center', padding: 8}}>Quarterback</Text>

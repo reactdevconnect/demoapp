@@ -1,2 +1,3 @@
-dependencies: /Users/sonal/Desktop/demoApp/ios/demoApp/main.m \
-  /Users/sonal/Desktop/demoApp/ios/demoApp/AppDelegate.h
+dependencies: \
+  /Users/dev/Desktop/ReactNativeApp/dempApp/ios/demoApp/main.m \
+  /Users/dev/Desktop/ReactNativeApp/dempApp/ios/demoApp/AppDelegate.h

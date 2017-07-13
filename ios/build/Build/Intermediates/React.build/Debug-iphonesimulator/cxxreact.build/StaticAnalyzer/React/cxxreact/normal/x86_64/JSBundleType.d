@@ -1,4 +1,4 @@
 dependencies: \
-  /Users/sonal/Desktop/demoApp/node_modules/react-native/ReactCommon/cxxreact/JSBundleType.cpp \
-  /Users/sonal/Desktop/demoApp/node_modules/react-native/ReactCommon/cxxreact/JSBundleType.h \
-  /Users/sonal/Desktop/demoApp/node_modules/react-native/ReactCommon/cxxreact/oss-compat-util.h
+  /Users/dev/Desktop/ReactNativeApp/dempApp/node_modules/react-native/ReactCommon/cxxreact/JSBundleType.cpp \
+  /Users/dev/Desktop/ReactNativeApp/dempApp/node_modules/react-native/ReactCommon/cxxreact/JSBundleType.h \
+  /Users/dev/Desktop/ReactNativeApp/dempApp/node_modules/react-native/ReactCommon/cxxreact/oss-compat-util.h

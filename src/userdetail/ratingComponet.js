@@ -19,12 +19,12 @@ export default class RatingComponent extends Component {
     constructor(props){
         super(props);
         this.state={
-            rate: 3,
+            rate: 0,
             isBigger: props.isBigger
         }
     }
 
-    componentWillReceiveProps(nextProps){
+    componentWillReceiveProps(nextProps) {
     }
 
     onClick = (index) => {

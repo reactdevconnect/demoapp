@@ -40,6 +40,7 @@ export default class UserDetail extends Component {
     }
 
     componentWillMount() {
+
         const data = this.getData();
 
         data.map((item, index) => {
@@ -134,6 +135,13 @@ export default class UserDetail extends Component {
             //More Locales will be available upon release.
             var spokenText = await SpeechAndroid.startSpeech("Speak yo", SpeechAndroid.ENGLISH);
             ToastAndroid.show(spokenText , ToastAndroid.LONG);
+            const goToRecord = NavigationActions.navigate({
+                routeName: 'Recorder',
+                params: {
+                    textData: spokenText
+                }
+            });
+            this.props.navigation.dispatch(goToRecord);
         }catch(error){
             switch(error){
                 case SpeechAndroid.E_VOICE_CANCELLED:

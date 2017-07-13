@@ -1,17 +1,17 @@
 dependencies: \
-  /Users/sonal/Desktop/demoApp/node_modules/react-native/React/Modules/RCTAlertManager.m \
-  /Users/sonal/Desktop/demoApp/node_modules/react-native/React/Modules/RCTAlertManager.h \
-  /Users/sonal/Desktop/demoApp/node_modules/react-native/React/Base/RCTBridgeModule.h \
-  /Users/sonal/Desktop/demoApp/node_modules/react-native/React/Base/RCTDefines.h \
-  /Users/sonal/Desktop/demoApp/node_modules/react-native/React/Base/RCTInvalidating.h \
-  /Users/sonal/Desktop/demoApp/node_modules/react-native/React/Base/RCTAssert.h \
-  /Users/sonal/Desktop/demoApp/node_modules/react-native/React/Base/RCTConvert.h \
-  /Users/sonal/Desktop/demoApp/node_modules/react-native/React/Views/RCTAnimationType.h \
-  /Users/sonal/Desktop/demoApp/node_modules/react-native/React/Views/RCTBorderStyle.h \
-  /Users/sonal/Desktop/demoApp/node_modules/react-native/React/Base/RCTLog.h \
-  /Users/sonal/Desktop/demoApp/node_modules/react-native/React/Base/RCTUtils.h \
-  /Users/sonal/Desktop/demoApp/node_modules/react-native/React/Views/RCTPointerEvents.h \
-  /Users/sonal/Desktop/demoApp/node_modules/react-native/React/Views/RCTTextDecorationLineType.h \
-  /Users/sonal/Desktop/demoApp/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/Yoga.h \
-  /Users/sonal/Desktop/demoApp/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGEnums.h \
-  /Users/sonal/Desktop/demoApp/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGMacros.h
+  /Users/dev/Desktop/ReactNativeApp/dempApp/node_modules/react-native/React/Modules/RCTAlertManager.m \
+  /Users/dev/Desktop/ReactNativeApp/dempApp/node_modules/react-native/React/Modules/RCTAlertManager.h \
+  /Users/dev/Desktop/ReactNativeApp/dempApp/node_modules/react-native/React/Base/RCTBridgeModule.h \
+  /Users/dev/Desktop/ReactNativeApp/dempApp/node_modules/react-native/React/Base/RCTDefines.h \
+  /Users/dev/Desktop/ReactNativeApp/dempApp/node_modules/react-native/React/Base/RCTInvalidating.h \
+  /Users/dev/Desktop/ReactNativeApp/dempApp/node_modules/react-native/React/Base/RCTAssert.h \
+  /Users/dev/Desktop/ReactNativeApp/dempApp/node_modules/react-native/React/Base/RCTConvert.h \
+  /Users/dev/Desktop/ReactNativeApp/dempApp/node_modules/react-native/React/Views/RCTAnimationType.h \
+  /Users/dev/Desktop/ReactNativeApp/dempApp/node_modules/react-native/React/Views/RCTBorderStyle.h \
+  /Users/dev/Desktop/ReactNativeApp/dempApp/node_modules/react-native/React/Base/RCTLog.h \
+  /Users/dev/Desktop/ReactNativeApp/dempApp/node_modules/react-native/React/Base/RCTUtils.h \
+  /Users/dev/Desktop/ReactNativeApp/dempApp/node_modules/react-native/React/Views/RCTPointerEvents.h \
+  /Users/dev/Desktop/ReactNativeApp/dempApp/node_modules/react-native/React/Views/RCTTextDecorationLineType.h \
+  /Users/dev/Desktop/ReactNativeApp/dempApp/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/Yoga.h \
+  /Users/dev/Desktop/ReactNativeApp/dempApp/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGEnums.h \
+  /Users/dev/Desktop/ReactNativeApp/dempApp/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGMacros.h

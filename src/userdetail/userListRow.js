@@ -19,20 +19,25 @@ export default class DetailComponent extends Component {
 
     constructor(props){
         super(props);
-        
+
         this.state={
             rowId: props.rowId || 0,
+            rowData: props.rowData || {}
         }
     }
 
     componentWillReceiveProps(nextProps){
     }
-    
+
+    capitalizeFirstLetter = (string) => {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    };
+
     render() {
         return(
             <View style={{backgroundColor: "#FFF", borderRadius:3, flexDirection:'row', borderWidth:1.5, borderColor: Constant.COLOR.boxBorder}} >
                 <View style={{flex:0.25,paddingTop:15 }}>
-                    <Image source={require('../images/tmpuser.jpeg')}
+                    <Image source={require('../images/userprofile.png')}
                            style={{ alignSelf: 'center',
                                height:Constant.SCREEN.width*0.16,
                                width: Constant.SCREEN.width*0.16,
@@ -44,7 +49,10 @@ export default class DetailComponent extends Component {
                 <View style={{flex:0.75, paddingTop:15, paddingLeft:10, paddingRight:15, paddingBottom:10}}>
 
                     <View style={{ flexDirection:'row', justifyContent:'space-between' }}>
-                        <Text style={{ fontSize:15, fontWeight: 'bold', color: Constant.COLOR.appBlack }}>TOM BRADY</Text>
+                        <Text style={{ fontSize:15, fontWeight: 'bold', color: Constant.COLOR.appBlack }}>
+                            { (this.state.rowData.full_name) ?
+                                this.capitalizeFirstLetter(this.state.rowData.full_name) : '' }
+                        </Text>
                         <Image source={require('../images/bookmark.png')} style={{resizeMode:'contain'}}/>
                     </View>
 
@@ -63,12 +71,12 @@ export default class DetailComponent extends Component {
                     <View style={{ flexDirection:'row', justifyContent:'flex-start' }}>
                         <View style={styles.innerRowView}>
                             <Text style={styles.infoText}>Height :</Text>
-                            <Text style={styles.detailText}>6-4</Text>
+                            <Text style={styles.detailText}>{ this.state.rowData.height }</Text>
                         </View>
 
                         <View style={[styles.innerRowView, { paddingLeft:15}]}>
                             <Text style={styles.infoText}>Weight</Text>
-                            <Text style={styles.detailText}> : 225</Text>
+                            <Text style={styles.detailText}> : { this.state.rowData.weight }</Text>
                         </View>
                     </View>
 
@@ -99,7 +107,7 @@ export default class DetailComponent extends Component {
                         <Text style={styles.linkText}> : shvl.com/v/35fg2 </Text>
                     </View>
 
-                    <TouchableHighlight onPress={this.props.onViewProfile} underlayColor={"transparent"}>
+                    <TouchableHighlight onPress={() => this.props.onViewProfile(this.state.rowData.id)} underlayColor={"transparent"}>
                         <View style={{ flexDirection:'row', borderWidth:0.8, borderColor: Constant.COLOR.appColor, borderRadius: 3, width: 120,
                             alignItems: 'center', justifyContent: 'center', padding: 5, marginTop:8}}>
                             <Text style={{color:Constant.COLOR.appColor,fontSize:15, fontWeight:'bold'}}>VIEW PROFILE</Text>
