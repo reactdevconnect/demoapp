@@ -29,7 +29,8 @@ export default class Search extends Component {
         this.state={
             dataSource: new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2}),
             arrList: [],
-            meta: {}
+            meta: {},
+            isLoading: false
         }
     }
 
@@ -43,6 +44,7 @@ export default class Search extends Component {
     //API call
     getAthleteDetails() {
 
+        this.setIsLoading(true);
         var url = ApConstant.athlete;
         if(this.state.meta.next != null){
             url = this.state.meta.next;
@@ -57,9 +59,15 @@ export default class Search extends Component {
                 arrList: athletes,
                 meta: res.meta,
             });
-
+            this.setIsLoading(false);
         }).catch(err => {
             debugger;
+        });
+    }
+
+    setIsLoading = (flag) =>{
+        this.setState({
+            isLoading: flag,
         });
     }
 
@@ -153,10 +161,13 @@ export default class Search extends Component {
                               enableEmptySections={ true }
                     />
 
-                    <View style={{backgroundColor: 'red'}}>
-                        <Text>Loading....</Text>
-                    </View>
                 </View>
+                { (this.state.isLoading) &&
+                <View style={{backgroundColor: '#FFF', height: 50, alignItems:'center', justifyContent:'center'}}>
+                    <Text style={{ fontSize:15, fontWeight: '600'}}>Loading....</Text>
+                </View>
+                || null
+                }
             </View>
         );
     }
