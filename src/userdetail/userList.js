@@ -9,8 +9,6 @@ import {
     View,
     Image,
     ListView,
-    TouchableHighlight,
-    TouchableOpacity,
     TextInput
 } from 'react-native';
 
@@ -22,6 +20,8 @@ import { NavigationActions } from 'react-navigation';
 import { authAPICall } from '../helper/apiHelper/commonAPICall';
 import ApConstant from '../helper/apiHelper/apiConstant';
 
+let isFilterApplied = false;
+
 export default class Search extends Component {
 
     constructor(props){
@@ -30,7 +30,10 @@ export default class Search extends Component {
             dataSource: new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2}),
             arrList: [],
             meta: {},
-            isLoading: false
+            isLoading: false,
+            arrFilter: [],
+            filterText: "",
+            isFilterApplied: false
         }
     }
 
@@ -48,17 +51,19 @@ export default class Search extends Component {
         var url = ApConstant.athlete;
         if(this.state.meta.next != null){
             url = this.state.meta.next;
+        }else if(this.state.meta.next == null && this.state.meta.total_count == this.state.arrList.length){
+            return;
         }
-
         authAPICall({url: url}).then(res => {
             let athletes = this.state.arrList;
             athletes.push.apply(athletes, res.objects);
-
-            this.setState({
-                dataSource:this.state.dataSource.cloneWithRows(athletes),
-                arrList: athletes,
-                meta: res.meta,
+            this.setState((prevState, props) => {
+                return {
+                    arrList: athletes,
+                    meta: res.meta,
+                };
             });
+            this.applyfilter(this.state.isFilterApplied, this.state.filterText);
             this.setIsLoading(false);
         }).catch(err => {
             debugger;
@@ -69,12 +74,11 @@ export default class Search extends Component {
         this.setState({
             isLoading: flag,
         });
-    }
+    };
 
     onViewProfile = (id) => {
         // const { navigate } = this.props.navigation;
         // navigate('UserDetail');
-
         const goToProfile = NavigationActions.navigate({
             routeName: 'UserDetail',
             params: {
@@ -82,7 +86,6 @@ export default class Search extends Component {
             }
         });
         this.props.navigation.dispatch(goToProfile);
-
     };
 
     renderRow = (rowData, sectionId, rowId) => {
@@ -115,6 +118,44 @@ export default class Search extends Component {
         this.getAthleteDetails();
     };
 
+    changeText = (text, str) =>{debugger;
+        let filterStr = str.toString().trim().toLowerCase();
+        if(filterStr.length > 0){
+            this.setState({
+                filterText: filterStr,
+                isFilterApplied: true
+            });
+            this.applyfilter(true, filterStr);
+        }else{
+            this.setState({
+                filterText: "",
+                isFilterApplied: false,
+                filterArr: []
+            });
+            this.applyfilter(false,"");
+        }
+
+    };
+
+    applyfilter = (isFilterApplied, filterText) => {
+        if(isFilterApplied){
+            let filterArr = this.state.arrList.filter(obj =>{
+                return obj.full_name.toLowerCase().includes(filterText);
+            });
+            this.setState({
+                dataSource:this.state.dataSource.cloneWithRows(filterArr)
+            });
+        }else{
+            this.setState({
+                dataSource:this.state.dataSource.cloneWithRows(this.state.arrList)
+
+            });
+        }
+
+    };
+
+
+
     render() {
         return (
             <View style={styles.container}>
@@ -131,11 +172,12 @@ export default class Search extends Component {
                     <TextInput
                         style={{ paddingLeft: 10,fontSize:15, color: Constant.COLOR.appColor,
                             placeholderTextColor: Constant.COLOR.grayFont, flex:0.9}}
-                        onChangeText={(text) => this.setState({text})}
+                        onChangeText={(text) => this.changeText(this,text)}
                         value={this.state.text}
                         placeholder={"Search here"}
                         underlineColorAndroid="transparent"
                         enablesReturnKeyAutomatically={true}
+
                     />
                     <Image source={require('../images/compose.png')} style={{flex: 0.1, resizeMode:'contain', alignSelf:'center'}}/>
 

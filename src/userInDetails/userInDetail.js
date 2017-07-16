@@ -10,11 +10,11 @@ import {
     Image,
     ListView,
     TouchableHighlight,
-    TouchableOpacity,
     StatusBar,
     TextInput,
     ScrollView,
-    FlatList
+    FlatList,
+    Linking,
 } from 'react-native';
 
 import NavigationBar from '../customNavigator';
@@ -44,7 +44,8 @@ export default class Search extends Component {
     }
 
     componentDidMount(){
-
+        debugger;
+        console.log(this.state.userDetail);
     }
 
 
@@ -55,6 +56,8 @@ export default class Search extends Component {
             this.setState({
                 userDetail: res
             });
+            debugger;
+
         }).catch(err => {
             debugger;
         });
@@ -75,7 +78,6 @@ export default class Search extends Component {
         return(
             <View style={{ flex:1,width:Constant.SCREEN.width/2, backgroundColor:'#FFF', marginRight:10,
             padding:5, borderWidth:2, borderRadius:3, borderColor:Constant.COLOR.boxBorder}}>
-
                 <Image source={require('../images/videoPlaceholder.jpg')} style={{height: Constant.SCREEN.width/3.5,
                     width:Constant.SCREEN.width/2-14,
                     resizeMode:'cover'}}/>
@@ -120,7 +122,8 @@ export default class Search extends Component {
                         alignItem: 'center',
                         justifyContent: 'center'
                     }}>
-                        <Image source={require('../images/userprofile.png')}
+                        <Image defaultSource={require('../images/userprofile.png')}
+                               source={{uri: this.state.userDetail.main_photo || ""}}
                                style={{ alignSelf: 'center',
                                    height:Constant.SCREEN.width/3,
                                    width: Constant.SCREEN.width/3,
@@ -128,8 +131,9 @@ export default class Search extends Component {
                                    resizeMode:'cover',
                                    marginBottom:10,
                                }}/>
-                        <Text style={{marginBottom:10, alignSelf: 'center', fontSize:15, fontWeight: 'bold', color: Constant.COLOR.appBlack }}>
-                            { (this.state.userDetail.full_name) ? this.state.userDetail.full_name.toString().toUpperCase() : ''
+                        <Text style={{marginBottom:10, alignSelf: 'center', fontSize:15, fontWeight: 'bold',
+                            color: Constant.COLOR.appBlack }}>
+                            { (this.state.userDetail.full_name) ? this.state.userDetail.full_name.toString().toUpperCase() : 'null'
                                 }</Text>
                         <View style={{marginBottom:10, alignSelf: 'center', backgroundColor: 'rgb(157,167,179)', borderRadius: 3,
                             justifyContent:'center', width: 105}}>
@@ -137,23 +141,26 @@ export default class Search extends Component {
                         </View>
                         <Rating isBigger={true} />
                         <Text style={styles.detailText}>
-                            Georgia, Milton(Alpharetta) | Senior,2015 </Text>
+                            Georgia, Milton(Alpharetta) |
+                            { "null" } ,
+                            { (this.state.userDetail.graduation_year) ?
+                                this.state.userDetail.graduation_year.toString() : "null" } </Text>
                         <View style={{ height:2, backgroundColor: Constant.COLOR.boxBorder, marginBottom:15, marginTop:15}}/>
 
                         <View style={{ flex:1, flexDirection:'row', justifyContent:'space-between',marginBottom:20 }}>
                             <View>
                                 <Text style={styles.infoText}>HEIGHT</Text>
-                                <Text style={styles.detailText}>6-4</Text>
+                                <Text style={styles.detailText}>{ this.state.userDetail.height || 'nill' }</Text>
                             </View>
 
                             <View>
                                 <Text style={styles.infoText}>WEIGHT</Text>
-                                <Text style={styles.detailText}>225</Text>
+                                <Text style={styles.detailText}>{ this.state.userDetail.weight || 'nill' }</Text>
                             </View>
 
                             <View>
                                 <Text style={styles.infoText}>40 YD TIME</Text>
-                                <Text style={styles.detailText}> 4.7</Text>
+                                <Text style={styles.detailText}> { this.state.userDetail.result_40yards || "null"}</Text>
                             </View>
                         </View>
 
@@ -177,7 +184,13 @@ export default class Search extends Component {
 
                         <View style={{ justifyContent:'flex-start', paddingTop:8 }}>
                             <Text style={[styles.infoText,{alignSelf:'flex-start'}]}>HUDL</Text>
-                            <Text style={styles.linkText}>shvl.com/v/35fg2 </Text>
+                            <TouchableHighlight onPress={ ()=>{
+                                if(this.state.userDetail.hudl_profile_url){ Linking.openURL(this.state.userDetail.hudl_profile_url)}}}
+                                                underlayColor={"transparent"}>
+                                <Text style={styles.linkText}> { this.state.userDetail.hudl_profile_url || "null"} </Text>
+                            </TouchableHighlight>
+
+
                         </View>
                         <View style={{ height:2, backgroundColor: Constant.COLOR.boxBorder, marginBottom:15, marginTop:15}}/>
 
@@ -224,7 +237,7 @@ const styles = StyleSheet.create({
     linkText:{
         color: 'rgb(0,102,255)',
         fontSize:15,
-        marginTop:5
+        marginTop:5,
     },
 
 });

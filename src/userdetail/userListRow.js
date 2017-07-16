@@ -10,7 +10,8 @@ import {
     Image,
     ListView,
     TouchableHighlight,
-    Alert
+    Alert,
+    Linking,
 } from 'react-native';
 import Constant from '../helper/constant'
 
@@ -37,7 +38,8 @@ export default class DetailComponent extends Component {
         return(
             <View style={{backgroundColor: "#FFF", borderRadius:3, flexDirection:'row', borderWidth:1.5, borderColor: Constant.COLOR.boxBorder}} >
                 <View style={{flex:0.25,paddingTop:15 }}>
-                    <Image source={require('../images/userprofile.png')}
+                    <Image defaultSource={require('../images/userprofile.png')}
+                           source={{uri: this.state.rowData.main_photo || ""}}
                            style={{ alignSelf: 'center',
                                height:Constant.SCREEN.width*0.16,
                                width: Constant.SCREEN.width*0.16,
@@ -60,30 +62,31 @@ export default class DetailComponent extends Component {
                         <View style={{ padding:5, backgroundColor: 'rgb(157,167,179)', borderRadius: 3}}>
                             <Text style={{ color: '#FFF', fontSize:15}}>Quarterback</Text>
                         </View>
-                        <Rating/>
+                        <Rating rate={ this.state.rowData.rating || 0 } />
                     </View>
 
                     <View style={styles.innerRowView}>
                         <Text style={styles.detailText}>
-                            Georgia, Milton(Alpharetta) | Senior,2015 </Text>
+                            Georgia, Milton(Alpharetta) | { this.state.rowData.position.name || "null" } ,
+                            { (this.state.rowData.graduation_year) ? this.state.rowData.graduation_year.toString() : "null" } </Text>
                     </View>
 
                     <View style={{ flexDirection:'row', justifyContent:'flex-start' }}>
                         <View style={styles.innerRowView}>
                             <Text style={styles.infoText}>Height :</Text>
-                            <Text style={styles.detailText}>{ this.state.rowData.height }</Text>
+                            <Text style={styles.detailText}>{ this.state.rowData.height || "null" }</Text>
                         </View>
 
                         <View style={[styles.innerRowView, { paddingLeft:15}]}>
                             <Text style={styles.infoText}>Weight</Text>
-                            <Text style={styles.detailText}> : { this.state.rowData.weight }</Text>
+                            <Text style={styles.detailText}> : { this.state.rowData.weight || "null" }</Text>
                         </View>
                     </View>
 
                     <View style={{ flexDirection:'row', justifyContent:'space-between', flexWrap: 'wrap' }}>
                         <View style={styles.innerRowView}>
                             <Text style={styles.infoText}>40yd</Text>
-                            <Text style={styles.detailText}> : 4.7</Text>
+                            <Text style={styles.detailText}> : { this.state.rowData.result_40yards || "null"}</Text>
                         </View>
 
                         <View style={styles.innerRowView}>
@@ -104,7 +107,11 @@ export default class DetailComponent extends Component {
 
                     <View style={{ flexDirection:'row', justifyContent:'flex-start', paddingTop:8 }}>
                         <Text style={styles.infoText}>Hudl</Text>
-                        <Text style={styles.linkText}> : shvl.com/v/35fg2 </Text>
+                        <TouchableHighlight onPress={ ()=>{
+                            if(this.state.rowData.hudl_profile_url){ Linking.openURL(this.state.rowData.hudl_profile_url)}}}
+                                            underlayColor={"transparent"}>
+                            <Text style={styles.linkText}> :  { this.state.rowData.hudl_profile_url || "null"} </Text>
+                        </TouchableHighlight>
                     </View>
 
                     <TouchableHighlight onPress={() => this.props.onViewProfile(this.state.rowData.id)} underlayColor={"transparent"}>

@@ -88,7 +88,6 @@ export default class UserDetail extends Component {
         homeData.map((obj)=>{
             obj.isSelected = false
         });
-
         return homeData;
     }
 

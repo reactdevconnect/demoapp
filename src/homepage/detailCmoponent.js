@@ -69,7 +69,7 @@ export default class DetailComponent extends Component {
                             {
                                 this.state.rowData.details.map(function (item) {
                                     return(
-                                        <View style={styles.rowMainView}>
+                                        <View1 style={styles.rowMainView}>
                                             <View style={styles.rowIconView}>
                                                 <Image source={require('../images/bullet.png')}
                                                        style={styles.indexIcon}/>
@@ -79,7 +79,7 @@ export default class DetailComponent extends Component {
                                                     250 lb linebacker that runs 4.8 40 yd dash
                                                 </Text>
                                             </View>
-                                        </View>
+                                        </View1>
                                     )
                                 })
                             }

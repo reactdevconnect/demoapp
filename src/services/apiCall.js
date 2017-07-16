@@ -3,7 +3,6 @@ import axios from 'axios'
 import {Alert} from 'react-native'
 
 export function CallApi(url,type='get',data={},header=[]) {
-
     return axios.get(url,{headers: header})
         .then((response) => {
             return Promise.resolve(response.data.data)
