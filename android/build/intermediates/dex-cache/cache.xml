@@ -8,7 +8,7 @@
         optimize="true"
         revision="23.0.1"
         sha1="f824591a0016efbaeddb8300bee54832a1398cfa">
-        <dex dex="/Users/dev/Desktop/ReactNativeApp/dempApp/android/app/build/intermediates/pre-dexed/release/okio-1.9.0_7f6947f54d4d522164638bf6782654f5dee321dc.jar" />
+        <dex dex="/Users/dev/Desktop/ReactNativeApp/dempApp/android/app/build/intermediates/pre-dexed/debug/okio-1.9.0_7f6947f54d4d522164638bf6782654f5dee321dc.jar" />
     </item>
     <item
         is-multidex="false"
@@ -17,7 +17,7 @@
         optimize="true"
         revision="23.0.1"
         sha1="63994437f62bc861bc20c605d12962f7246116d1">
-        <dex dex="/Users/dev/Desktop/ReactNativeApp/dempApp/android/app/build/intermediates/pre-dexed/release/okhttp-urlconnection-3.4.1_644468dd6c4c8f96fee8d147211192a3161adf65.jar" />
+        <dex dex="/Users/dev/Desktop/ReactNativeApp/dempApp/android/app/build/intermediates/pre-dexed/debug/okhttp-urlconnection-3.4.1_644468dd6c4c8f96fee8d147211192a3161adf65.jar" />
     </item>
     <item
         is-multidex="false"
@@ -26,25 +26,7 @@
         optimize="true"
         revision="23.0.1"
         sha1="f162442a19fff13995fbd51ba414d9ee05579080">
-        <dex dex="/Users/dev/Desktop/ReactNativeApp/dempApp/android/app/build/intermediates/pre-dexed/release/staticlayout-proxy-1.0_29bff7bd45373be1aaf76e5673577df60a3e01d2.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/dev/Desktop/ReactNativeApp/dempApp/android/app/build/intermediates/exploded-aar/com.facebook.fresco/drawee/1.0.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="5a61f17cd72e20aa4323cbf5f909b7c609619275">
-        <dex dex="/Users/dev/Desktop/ReactNativeApp/dempApp/android/app/build/intermediates/pre-dexed/release/com.facebook.fresco-drawee-1.0.1_0c755c78eb39cc3b61d648b40b951e67515f0c0f.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/dev/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.1.1/support-annotations-23.1.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
-        <dex dex="/Users/dev/Desktop/ReactNativeApp/dempApp/android/app/build/intermediates/pre-dexed/release/support-annotations-23.1.1_4a941d95a41eced968e1acaa040e847f9ef49142.jar" />
+        <dex dex="/Users/dev/Desktop/ReactNativeApp/dempApp/android/app/build/intermediates/pre-dexed/debug/staticlayout-proxy-1.0_29bff7bd45373be1aaf76e5673577df60a3e01d2.jar" />
     </item>
     <item
         is-multidex="false"
@@ -53,16 +35,7 @@
         optimize="true"
         revision="23.0.1"
         sha1="c97dc8446f6a46da5620f40b3737e162d53c40c2">
-        <dex dex="/Users/dev/Desktop/ReactNativeApp/dempApp/android/app/build/intermediates/pre-dexed/release/com.yqritc-android-scalablevideoview-1.0.1_aaeb66e66cdb2f0d3a9085a2aead7ed1ce67a6f3.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/dev/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
-        <dex dex="/Users/dev/Desktop/ReactNativeApp/dempApp/android/app/build/intermediates/pre-dexed/release/bolts-tasks-1.4.0_b271a8c5a34b5b0f92d2953c855e387cc60588d7.jar" />
+        <dex dex="/Users/dev/Desktop/ReactNativeApp/dempApp/android/app/build/intermediates/pre-dexed/debug/com.yqritc-android-scalablevideoview-1.0.1_aaeb66e66cdb2f0d3a9085a2aead7ed1ce67a6f3.jar" />
     </item>
     <item
         is-multidex="false"
@@ -71,16 +44,7 @@
         optimize="true"
         revision="23.0.1"
         sha1="cf836a435a496eb22ff2aa69aa1e619462549f81">
-        <dex dex="/Users/dev/Desktop/ReactNativeApp/dempApp/android/app/build/intermediates/pre-dexed/release/com.facebook.fresco-fresco-1.0.1_80d56389137fdf77c3fedaa75ab1e193543c4a39.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/dev/Desktop/ReactNativeApp/dempApp/android/app/build/intermediates/exploded-aar/com.facebook.soloader/soloader/0.1.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="8f615bca00639150c9eb6175d4b5471193f70794">
-        <dex dex="/Users/dev/Desktop/ReactNativeApp/dempApp/android/app/build/intermediates/pre-dexed/release/com.facebook.soloader-soloader-0.1.0_971043ba54f24eb156ad7d56d0b6612bd41b035b.jar" />
+        <dex dex="/Users/dev/Desktop/ReactNativeApp/dempApp/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fresco-1.0.1_80d56389137fdf77c3fedaa75ab1e193543c4a39.jar" />
     </item>
     <item
         is-multidex="false"
@@ -89,7 +53,7 @@
         optimize="true"
         revision="23.0.1"
         sha1="9dc0e17e2c63aa53eda55c52d13500edc3a35587">
-        <dex dex="/Users/dev/Desktop/ReactNativeApp/dempApp/android/app/build/intermediates/pre-dexed/release/demoApp-react-native-video-unspecified_d97dee5f124a2a90771a1a8c9b8441337e5abd5e.jar" />
+        <dex dex="/Users/dev/Desktop/ReactNativeApp/dempApp/android/app/build/intermediates/pre-dexed/debug/demoApp-react-native-video-unspecified_d97dee5f124a2a90771a1a8c9b8441337e5abd5e.jar" />
     </item>
     <item
         is-multidex="false"
@@ -98,7 +62,7 @@
         optimize="true"
         revision="23.0.1"
         sha1="d9c4402c3057225d80cbbbec52154e7a25b0ebdf">
-        <dex dex="/Users/dev/Desktop/ReactNativeApp/dempApp/android/app/build/intermediates/pre-dexed/release/com.facebook.fresco-imagepipeline-1.0.1_3c6b165bd0cec76a906b66b3b05643c96cff1174.jar" />
+        <dex dex="/Users/dev/Desktop/ReactNativeApp/dempApp/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-1.0.1_3c6b165bd0cec76a906b66b3b05643c96cff1174.jar" />
     </item>
     <item
         is-multidex="false"
@@ -107,16 +71,7 @@
         optimize="true"
         revision="23.0.1"
         sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
-        <dex dex="/Users/dev/Desktop/ReactNativeApp/dempApp/android/app/build/intermediates/pre-dexed/release/internal_impl-23.1.1_35d7c45bac73f2653e6890d40e271782cd1fe3d7.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/dev/Desktop/ReactNativeApp/dempApp/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.44.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="af9665a44df26b4098e24c934c1109507845ef5e">
-        <dex dex="/Users/dev/Desktop/ReactNativeApp/dempApp/android/app/build/intermediates/pre-dexed/release/com.facebook.react-react-native-0.44.0_b85c75f98cc01df1b5966540b7aef3acb875d7f5.jar" />
+        <dex dex="/Users/dev/Desktop/ReactNativeApp/dempApp/android/app/build/intermediates/pre-dexed/debug/internal_impl-23.1.1_35d7c45bac73f2653e6890d40e271782cd1fe3d7.jar" />
     </item>
     <item
         is-multidex="false"
@@ -125,7 +80,7 @@
         optimize="true"
         revision="23.0.1"
         sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
-        <dex dex="/Users/dev/Desktop/ReactNativeApp/dempApp/android/app/build/intermediates/pre-dexed/release/com.android.support-support-v4-23.1.1_7d118bc06da313636234b5959190195c5aa4a3d6.jar" />
+        <dex dex="/Users/dev/Desktop/ReactNativeApp/dempApp/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.1.1_7d118bc06da313636234b5959190195c5aa4a3d6.jar" />
     </item>
     <item
         is-multidex="false"
@@ -134,7 +89,7 @@
         optimize="true"
         revision="23.0.1"
         sha1="6975da39a7040257bd51d21a231b76c915872d38">
-        <dex dex="/Users/dev/Desktop/ReactNativeApp/dempApp/android/app/build/intermediates/pre-dexed/release/javax.inject-1_50cc49d90f2afe5571be71d3008a65dc5317cdfb.jar" />
+        <dex dex="/Users/dev/Desktop/ReactNativeApp/dempApp/android/app/build/intermediates/pre-dexed/debug/javax.inject-1_50cc49d90f2afe5571be71d3008a65dc5317cdfb.jar" />
     </item>
     <item
         is-multidex="false"
@@ -143,25 +98,7 @@
         optimize="true"
         revision="23.0.1"
         sha1="5c5699834e9722f1c288fea2de82725d078ba127">
-        <dex dex="/Users/dev/Desktop/ReactNativeApp/dempApp/android/app/build/intermediates/pre-dexed/release/com.android.support-appcompat-v7-23.1.1_3ff1406c2507815480d0deaee085cc1ad05312c6.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/dev/Desktop/ReactNativeApp/dempApp/android/app/build/intermediates/exploded-aar/com.facebook.fbui.textlayoutbuilder/textlayoutbuilder/1.0.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="f90b593491e4044903f0bbf68dc3fa2790b151b9">
-        <dex dex="/Users/dev/Desktop/ReactNativeApp/dempApp/android/app/build/intermediates/pre-dexed/release/com.facebook.fbui.textlayoutbuilder-textlayoutbuilder-1.0.0_f04b0483b5716a90fdd0327a554790a547ac1d58.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/dev/Desktop/ReactNativeApp/dempApp/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-base/1.0.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="050f688115ea65a0292d8483a6ffe6bcdab1e2ef">
-        <dex dex="/Users/dev/Desktop/ReactNativeApp/dempApp/android/app/build/intermediates/pre-dexed/release/com.facebook.fresco-imagepipeline-base-1.0.1_1ad9290e0d29d1d96ed6edf5c16f3867c9ada0e9.jar" />
+        <dex dex="/Users/dev/Desktop/ReactNativeApp/dempApp/android/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.1.1_3ff1406c2507815480d0deaee085cc1ad05312c6.jar" />
     </item>
     <item
         is-multidex="false"
@@ -170,7 +107,7 @@
         optimize="true"
         revision="23.0.1"
         sha1="8ace66ef7002d98f633377c9e67daeeb196d8c3b">
-        <dex dex="/Users/dev/Desktop/ReactNativeApp/dempApp/android/app/build/intermediates/pre-dexed/release/okhttp-ws-3.4.1_7e18649cf2c484f00cc256a6b93e6c9165384031.jar" />
+        <dex dex="/Users/dev/Desktop/ReactNativeApp/dempApp/android/app/build/intermediates/pre-dexed/debug/okhttp-ws-3.4.1_7e18649cf2c484f00cc256a6b93e6c9165384031.jar" />
     </item>
     <item
         is-multidex="false"
@@ -179,16 +116,7 @@
         optimize="true"
         revision="23.0.1"
         sha1="dcac634e137395f79693ec760f081a86eb2bd84e">
-        <dex dex="/Users/dev/Desktop/ReactNativeApp/dempApp/android/app/build/intermediates/pre-dexed/release/infer-annotations-1.5_fc3597a3c52c5f30e693ff4bbbb4c294a3765a6f.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/dev/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.4.1/c7c4f9e35c2fd5900da24f9872e3971801f08ce0/okhttp-3.4.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="c7c4f9e35c2fd5900da24f9872e3971801f08ce0">
-        <dex dex="/Users/dev/Desktop/ReactNativeApp/dempApp/android/app/build/intermediates/pre-dexed/release/okhttp-3.4.1_2099e10c7720cf9e51ad0aca640127290429cb04.jar" />
+        <dex dex="/Users/dev/Desktop/ReactNativeApp/dempApp/android/app/build/intermediates/pre-dexed/debug/infer-annotations-1.5_fc3597a3c52c5f30e693ff4bbbb4c294a3765a6f.jar" />
     </item>
     <item
         is-multidex="false"
@@ -197,7 +125,7 @@
         optimize="true"
         revision="23.0.1"
         sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
-        <dex dex="/Users/dev/Desktop/ReactNativeApp/dempApp/android/app/build/intermediates/pre-dexed/release/jsr305-3.0.0_ba5866ec72b8fea1653bdf93751180f45d5a948e.jar" />
+        <dex dex="/Users/dev/Desktop/ReactNativeApp/dempApp/android/app/build/intermediates/pre-dexed/debug/jsr305-3.0.0_ba5866ec72b8fea1653bdf93751180f45d5a948e.jar" />
     </item>
     <item
         is-multidex="false"
@@ -206,7 +134,7 @@
         optimize="true"
         revision="23.0.1"
         sha1="2668e49e4e31c7d451b76a36009b902bf44e0d70">
-        <dex dex="/Users/dev/Desktop/ReactNativeApp/dempApp/android/app/build/intermediates/pre-dexed/release/com.facebook.fresco-fbcore-1.0.1_720791189504f42432fcbfea181b632d926a2808.jar" />
+        <dex dex="/Users/dev/Desktop/ReactNativeApp/dempApp/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fbcore-1.0.1_720791189504f42432fcbfea181b632d926a2808.jar" />
     </item>
     <item
         is-multidex="false"
@@ -215,7 +143,79 @@
         optimize="true"
         revision="23.0.1"
         sha1="f2debadfa910703c7702ef606749c1b73fa0ea9d">
-        <dex dex="/Users/dev/Desktop/ReactNativeApp/dempApp/android/app/build/intermediates/pre-dexed/release/demoApp-VoiceModule-unspecified_eff2f19852628935d657ce1bfbd4d24aed109bce.jar" />
+        <dex dex="/Users/dev/Desktop/ReactNativeApp/dempApp/android/app/build/intermediates/pre-dexed/debug/demoApp-VoiceModule-unspecified_eff2f19852628935d657ce1bfbd4d24aed109bce.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/dev/Desktop/ReactNativeApp/dempApp/android/app/build/intermediates/exploded-aar/com.facebook.fresco/drawee/1.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="5a61f17cd72e20aa4323cbf5f909b7c609619275">
+        <dex dex="/Users/dev/Desktop/ReactNativeApp/dempApp/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-drawee-1.0.1_0c755c78eb39cc3b61d648b40b951e67515f0c0f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/dev/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.1.1/support-annotations-23.1.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
+        <dex dex="/Users/dev/Desktop/ReactNativeApp/dempApp/android/app/build/intermediates/pre-dexed/debug/support-annotations-23.1.1_4a941d95a41eced968e1acaa040e847f9ef49142.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/dev/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="/Users/dev/Desktop/ReactNativeApp/dempApp/android/app/build/intermediates/pre-dexed/debug/bolts-tasks-1.4.0_b271a8c5a34b5b0f92d2953c855e387cc60588d7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/dev/Desktop/ReactNativeApp/dempApp/android/app/build/intermediates/exploded-aar/com.facebook.soloader/soloader/0.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="8f615bca00639150c9eb6175d4b5471193f70794">
+        <dex dex="/Users/dev/Desktop/ReactNativeApp/dempApp/android/app/build/intermediates/pre-dexed/debug/com.facebook.soloader-soloader-0.1.0_971043ba54f24eb156ad7d56d0b6612bd41b035b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/dev/Desktop/ReactNativeApp/dempApp/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.44.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="af9665a44df26b4098e24c934c1109507845ef5e">
+        <dex dex="/Users/dev/Desktop/ReactNativeApp/dempApp/android/app/build/intermediates/pre-dexed/debug/com.facebook.react-react-native-0.44.0_b85c75f98cc01df1b5966540b7aef3acb875d7f5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/dev/Desktop/ReactNativeApp/dempApp/android/app/build/intermediates/exploded-aar/com.facebook.fbui.textlayoutbuilder/textlayoutbuilder/1.0.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="f90b593491e4044903f0bbf68dc3fa2790b151b9">
+        <dex dex="/Users/dev/Desktop/ReactNativeApp/dempApp/android/app/build/intermediates/pre-dexed/debug/com.facebook.fbui.textlayoutbuilder-textlayoutbuilder-1.0.0_f04b0483b5716a90fdd0327a554790a547ac1d58.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/dev/Desktop/ReactNativeApp/dempApp/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-base/1.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="050f688115ea65a0292d8483a6ffe6bcdab1e2ef">
+        <dex dex="/Users/dev/Desktop/ReactNativeApp/dempApp/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-base-1.0.1_1ad9290e0d29d1d96ed6edf5c16f3867c9ada0e9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/dev/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.4.1/c7c4f9e35c2fd5900da24f9872e3971801f08ce0/okhttp-3.4.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="c7c4f9e35c2fd5900da24f9872e3971801f08ce0">
+        <dex dex="/Users/dev/Desktop/ReactNativeApp/dempApp/android/app/build/intermediates/pre-dexed/debug/okhttp-3.4.1_2099e10c7720cf9e51ad0aca640127290429cb04.jar" />
     </item>
     <item
         is-multidex="false"
@@ -224,7 +224,7 @@
         optimize="true"
         revision="23.0.1"
         sha1="ba9b39366b723ccff6359d1117332968e98a4aca">
-        <dex dex="/Users/dev/Desktop/ReactNativeApp/dempApp/android/app/build/intermediates/pre-dexed/release/com.facebook.fresco-imagepipeline-okhttp3-1.0.1_fead44e61e41502aaceead04a1f4bb954c7ff61c.jar" />
+        <dex dex="/Users/dev/Desktop/ReactNativeApp/dempApp/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-okhttp3-1.0.1_fead44e61e41502aaceead04a1f4bb954c7ff61c.jar" />
     </item>
 
 </items>

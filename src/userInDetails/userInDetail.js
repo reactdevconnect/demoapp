@@ -122,8 +122,8 @@ export default class Search extends Component {
                         alignItem: 'center',
                         justifyContent: 'center'
                     }}>
-                        <Image defaultSource={require('../images/userprofile.png')}
-                               source={{uri: this.state.userDetail.main_photo || ""}}
+                        <Image source={require('../images/userprofile.png')}
+                               // source={{uri: this.state.userDetail.main_photo || ""}}
                                style={{ alignSelf: 'center',
                                    height:Constant.SCREEN.width/3,
                                    width: Constant.SCREEN.width/3,
@@ -189,6 +189,7 @@ export default class Search extends Component {
                                                 underlayColor={"transparent"}>
                                 <Text style={styles.linkText}> { this.state.userDetail.hudl_profile_url || "null"} </Text>
                             </TouchableHighlight>
+
 
 
                         </View>

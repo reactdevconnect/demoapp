@@ -38,8 +38,8 @@ export default class DetailComponent extends Component {
         return(
             <View style={{backgroundColor: "#FFF", borderRadius:3, flexDirection:'row', borderWidth:1.5, borderColor: Constant.COLOR.boxBorder}} >
                 <View style={{flex:0.25,paddingTop:15 }}>
-                    <Image defaultSource={require('../images/userprofile.png')}
-                           source={{uri: this.state.rowData.main_photo || ""}}
+                    <Image source={require('../images/userprofile.png')}
+                           //source={{uri: this.state.rowData.main_photo || ""}}
                            style={{ alignSelf: 'center',
                                height:Constant.SCREEN.width*0.16,
                                width: Constant.SCREEN.width*0.16,
@@ -114,10 +114,14 @@ export default class DetailComponent extends Component {
                         </TouchableHighlight>
                     </View>
 
-                    <TouchableHighlight onPress={() => this.props.onViewProfile(this.state.rowData.id)} underlayColor={"transparent"}>
-                        <View style={{ flexDirection:'row', borderWidth:0.8, borderColor: Constant.COLOR.appColor, borderRadius: 3, width: 120,
-                            alignItems: 'center', justifyContent: 'center', padding: 5, marginTop:8}}>
-                            <Text style={{color:Constant.COLOR.appColor,fontSize:15, fontWeight:'bold'}}>VIEW PROFILE</Text>
+                    <TouchableHighlight onPress={() => this.props.onViewProfile(this.state.rowData.id)}
+                                        underlayColor={"transparent"}>
+                        <View style={{ flexDirection:'row', borderWidth:0.8,
+                            borderColor: Constant.COLOR.appColor, borderRadius: 3,
+                            alignItems: 'center', justifyContent: 'center', padding: 5,
+                            marginTop:8}}>
+                            <Text style={{color:Constant.COLOR.appColor,fontSize:15, fontWeight:'bold',
+                                alignSelf:'center'}}>VIEW PROFILE</Text>
                         </View>
                     </TouchableHighlight>
                 </View>
